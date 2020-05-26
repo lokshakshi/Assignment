@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Register Here</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="loginForm">
+            <mat-form-field >
+               <input matInput placeholder="Id" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" >
+             </mat-form-field>
+            <mat-form-field >       
+              <input matInput type="email" placeholder="emailxxx@gmail.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
+            </mat-form-field>
+          
+            <mat-form-field >
+              <input matInput type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" >
+            </mat-form-field>
+
+            <mat-form-field >              
+                  <input matInput placeholder="Firstname" [(ngModel)]="fname" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+
+                <mat-form-field >
+                      <input matInput  placeholder="Lastname" [(ngModel)]="lname" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+
+                <mat-form-field >
+                      <input matInput placeholder="yyyy-MM-dd" [(ngModel)]="dob" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+
+                    <mat-form-field >
+                          <input matInput placeholder="Company" [(ngModel)]="company" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field> 
+
+            <button color="primary" (click)="saveManager()" mat-raised-button type="submit">Save</button>
+          </form>  
+          
+          
+    </mat-card>
+    
+</div>

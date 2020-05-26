@@ -1,0 +1,73 @@
+<div>
+    <button class="buttonstyle" (click)="addUser()" mat-raised-button color="primary" >Add User</button>
+</div>
+
+
+    <!-- <button color="primary" class="btn btn-primay" (click)="addUser()">
+        Add User
+    </button> -->
+    <div class="tablestyle">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+
+      <ng-container matColumnDef="EmpId"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> EMP ID </th> 
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+ 
+      <ng-container matColumnDef="firstName"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>  
+      <td mat-cell *matCellDef="let row"> {{row.fname}} </td>  
+      </ng-container>
+  
+      <ng-container matColumnDef="lastName"> 
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.lname}} </td> 
+      </ng-container>
+
+      <ng-container matColumnDef="address"> 
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Addess </th>
+        <td mat-cell *matCellDef="let row"> {{row.address}} </td> 
+      </ng-container>
+
+      <ng-container matColumnDef="city"> 
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+        <td mat-cell *matCellDef="let row"> {{row.city}} </td> 
+      </ng-container>
+
+      <ng-container matColumnDef="mobile"> 
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile Number </th>
+        <td mat-cell *matCellDef="let row"> {{row.mobile}} </td> 
+      </ng-container>
+
+      <ng-container matColumnDef="dob"> 
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date of Birth </th>
+        <td mat-cell *matCellDef="let row"> {{row.dob}} </td> 
+      </ng-container>
+   
+      
+
+      <ng-container matColumnDef="editIcon">  
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit User</th>
+        <td mat-cell *matCellDef="let row"> 
+          <!-- <mat-icon svgIcon="edit" aria-hidden="false" (click)="editUser(row)"></mat-icon>  -->
+          <button (click)="editUser(row)"mat-button >Edit</button>
+
+        </td> 
+      </ng-container> 
+  
+      <ng-container matColumnDef="deleteIcon">  
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete User</th> 
+        <td mat-cell *matCellDef="let row"> 
+            <button (click)="deleteUser(row)" mat-button>Delete </button>
+          <!-- <mat-icon svgIcon="delete" aria-hidden="false" (click)="deleteUser(row)"></mat-icon>  -->
+        </td> 
+      </ng-container>  
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"> 
+      </tr> 
+    </table>
+    <!-- <mat-paginator [pageSizeOptions]="[100, 250, 500]"></mat-paginator> -->
+  
+   </div>

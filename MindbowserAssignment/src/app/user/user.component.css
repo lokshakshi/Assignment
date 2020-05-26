@@ -1,0 +1,58 @@
+table {
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center !important;
+    margin-left: 16%;
+  }
+  
+  tbody tr:nth-child(even){
+    background-color: #f2f2f2 !important;
+  }
+  
+  th {
+    font-weight: bold;
+    background: #e4f1fe;
+    font-size: 1em; 
+    color: black;
+  }
+  
+  tbody tr.mat-row.ng-star-inserted:hover {
+    background-color :#ddd;
+  }
+  
+  .mat-header-cell {
+    text-align: center;
+  }
+  
+  ::ng-deep .mat-sort-header-container {
+    display:flex;
+    justify-content:center;
+  }
+  
+  mat-paginator{
+    width: 86%;
+    margin: 1%;
+
+  }
+  
+  .header{ 
+    display: flex;  
+    justify-content: space-between; 
+    margin-bottom: 1em; 
+    margin-top: 1%;  
+    width: 70%; 
+    margin-left: 16%;
+  
+  }
+  .btn
+  {
+      color:"green";
+  }
+  .buttonstyle{
+margin-top:1%;
+margin-left:72%;
+  }
+  .tablestyle{
+      margin:2%;
+  }
+  

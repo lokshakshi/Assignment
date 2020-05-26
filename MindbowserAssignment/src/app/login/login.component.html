@@ -1,0 +1,39 @@
+<!-- <div style="text-align: center;">
+    <h1>MindBowser</h1>
+
+</div> -->
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="loginForm">
+            <mat-form-field >
+              <!-- <mat-label>Username</mat-label> -->
+              <input matInput [(ngModel)]="email" type="email" placeholder="email" [ngModelOptions]="{standalone: true}"  required  >
+            </mat-form-field>
+          
+            <mat-form-field >
+            <!-- <mat-label>Password</mat-label> -->
+              <input matInput [(ngModel)]="password" type="password" placeholder="Password" [ngModelOptions]="{standalone: true}" required >
+            </mat-form-field>
+            <button color="primary" (click)="login()" mat-raised-button type="submit">Login</button>
+            <p style="margin-top:5%;"> New to MindBowser? <button (click)="register()" style="float:right;"mat-raised-button color="primary" >Signup</button></p>
+          </form>  
+          
+          
+    </mat-card>
+    
+</div>
+<!-- loki
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="username">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="password">
+  </mat-form-field>
+</form> -->
